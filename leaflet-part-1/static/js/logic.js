@@ -1,7 +1,7 @@
 //-------------------------------------------MONTHLY EARTHQUAKE MAP---------------------------------------------//
 
 // Store our API endpoint as queryUrl.
-const queryUrl = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_month.geojson"
+const queryUrl = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson"
 
 // Perform a GET request to the query URL/
 d3.json(queryUrl).then(function (data) {
@@ -25,7 +25,7 @@ function createFeatures(earthquakeData) {
                 mouseover: function(event) {
                 layer = event.target;
                 layer.setStyle({
-                fillOpacity: 0.5
+                fillOpacity: 0.7
             })},
             // When the cursor no longer hovers over a map feature (that is, when the mouseout event occurs), the feature's opacity reverts back to 50%.
                 mouseout: function (event) {
@@ -39,7 +39,7 @@ function createFeatures(earthquakeData) {
 
     // Define a markerSize() function that will give each city a different radius based on its population.
     function markerSize(magnitude){
-        return Math.sqrt(magnitude)*4}
+        return Math.sqrt(magnitude)*5}
 
     // Create a GeoJSON layer that contains the features array on the earthquakeData object.
         // Run the onEachFeature function once for each piece of data in the array.
@@ -56,7 +56,7 @@ function createFeatures(earthquakeData) {
                 radius: markerSize(feature.properties.mag),
                 fillColor: chooseColor(feature.geometry.coordinates[2]),
                 color: chooseColor(feature.geometry.coordinates[2]),
-                weight: 1,
+                weight: 0.1,
                 opacity: 1,
                 fillOpacity: 0.8
     }
@@ -65,11 +65,11 @@ function createFeatures(earthquakeData) {
 
     // Create a function to determine the depth of the earthquake by color
     function chooseColor(depth) {
-            if (depth < 20) {return "rgb(230, 255, 230)"}
-            else if (depth < 50) {return "rgb(153, 255, 153)"}
-            else if (depth < 100) {return "rgb(77, 255, 77)"}
-            else if (depth <  200) {return "rgb(0, 179, 0)"}
-            else  {return "rgb(0, 102, 0)"}
+            if (depth < 5) {return "#fcfa28"}
+            else if (depth < 10) {return "#fcdd28"}
+            else if (depth < 25) {return "#fca928"}
+            else if (depth <  50) {return "#fc6828"}
+            else  {return "#a61928"}
 };
 
 // Create the baselayer and overlay maps
@@ -109,7 +109,7 @@ var legend = L.control({position: 'bottomright'});
 legend.onAdd = function () {
     
     var div = L.DomUtil.create('div', 'info legend'),
-        depth = [0, 20, 50, 100, 200],
+        depth = [-10, 5, 10, 25, 50],
         labels = [];
 
     // loop through our magnitude intervals and generate a label with a colored square for each interval
