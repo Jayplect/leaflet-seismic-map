@@ -1,7 +1,7 @@
 ## Overview
 The United States Geological Survey (USGS) is responsible for providing scientific data about natural hazards, the health of our ecosystems and environment, and the impacts of climate and land-use change. Their scientists develop new methods and tools to supply timely, relevant, and useful information about the Earth and its processes. The USGS is interested in building a new set of tools that will allow them to visualize their earthquake data. They collect a massive amount of data from all over the world each day, but they lack a meaningful way of displaying it. In this project, I built a map to visualize USGS data which could be a useful resource for educating the public and other government organizations on issues facing our planet.
 
-<img width="758" alt="image" src="https://github.com/Jayplect/leaflet-challenge/assets/107348074/06af8c7e-290b-4ca5-9153-ceccfb5587e9">
+
 
 ## Tools Used
 ![Leaflet](https://img.shields.io/badge/Leaflet-199900?style=for-the-badge&logo=Leaflet&logoColor=white)
@@ -17,23 +17,8 @@ Firstly, I created an app that renders data dynamically to the dashboard upon re
 
 - Fig 1: Horizontal bar chart display of the Top 10 OTU. The sample values represent the y-axis for the bar chart. While the OTU ids served as the labels for the bar chart. I also added a chart feature that allows hovertext for the OTU labels.
 
-![image](https://github.com/Jayplect/belly-button-microbe-diversity-dashboard/assets/107348074/b5129e2c-b4fb-4a5a-91f4-f0cb51a7e97c)
+<img width="758" alt="image" src="https://github.com/Jayplect/leaflet-challenge/assets/107348074/06af8c7e-290b-4ca5-9153-ceccfb5587e9">
 
-- Fig 2: Bubble chart showing the distribution of OTU in an individual. The OTU ids and sample values served as the x values and y values respectively. The sample values represent the marker size while the OTU ids (i.e., the composition of bacteria) served as the the marker colors. Again, I also added a chart feature that allows hovertext for the OTU labels.
-
-![image](https://github.com/Jayplect/belly-button-microbe-diversity-dashboard/assets/107348074/cd298cc0-77e4-45d1-9e18-5c9afc28dcbd)
-
-- Fig 3:  Guage chart showing the weekly washing frequency of an individual.
-
-![image](https://github.com/Jayplect/belly-button-microbe-diversity-dashboard/assets/107348074/aa3657cc-67aa-4dfe-a679-81ad217d54d1)
-
-- Fig 4: The sample metadata, i.e., an individual's demographic information.
- 
-![image](https://github.com/Jayplect/belly-button-microbe-diversity-dashboard/assets/107348074/698e6ed9-3d83-49c4-9e4a-453fe85d1208)
-
-- Fig 5: Dashboard to explore the microbes in a selected individual's belly button
-
-![image](https://github.com/Jayplect/belly-button-microbe-diversity-dashboard/assets/107348074/04597161-37b9-4e2a-9856-02c49ca6428a)
 
 ## Deployment of Dashboard 
 Deployed to  <a href = "https://jayplect.github.io/belly-button-microbe-diversity-dashboard/">Github pages<a/> to view.
