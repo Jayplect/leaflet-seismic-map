@@ -18,7 +18,7 @@ I imported and visualized the data using `Leaflet library` and then created a ma
 <img width="758" alt="image" src="https://github.com/Jayplect/leaflet-challenge/assets/107348074/06af8c7e-290b-4ca5-9153-ceccfb5587e9">
 
 ## Deployment of Dashboard 
-Deployed to  <a href = "https://jayplect.github.io/belly-button-microbe-diversity-dashboard/">Github pages<a/> to view.
+Deployed to  <a href = "https://jayplect.github.io/leaflet-seismic-map/">Github pages<a/> to view.
 
 ## References
 Dataset created by the United States Geological Survey.
