@@ -16,9 +16,26 @@ function createFeatures(earthquakeData) {
     function onEachFeature(feature, layer) {
             layer.bindPopup(
                 `<h3>${feature.properties.place}</h3>
-                <hr><p>${new Date(feature.properties.time)}</p>`
-            // layer.on
-    )};
+                <p>${new Date(feature.properties.time)}</p><hr>
+                <p><b>Depth:</b> ${feature.geometry.coordinates[2]}</p>
+                <p><b>Magnitude:</b> ${feature.properties.mag}</p>`
+            ),
+            layer.on({
+                // When a user's mouse cursor touches a map feature, the mouseover event calls this function, which makes that feature's opacity change to 90% so that it stands out.
+                mouseover: function(event) {
+                layer = event.target;
+                layer.setStyle({
+                fillOpacity: 0.5
+            })},
+            // When the cursor no longer hovers over a map feature (that is, when the mouseout event occurs), the feature's opacity reverts back to 50%.
+                mouseout: function (event) {
+                layer = event.target;
+                layer.setStyle({
+                fillOpacity: 0.5
+            });
+          }
+       })
+     }
 
     // Define a markerSize() function that will give each city a different radius based on its population.
     function markerSize(magnitude){
@@ -76,7 +93,7 @@ function createMap(earthquakes) {
     // Create our map, giving it the streetmap and earthquakes layers to display on load.
     // And Add to the div tag
     let myMap = L.map("map", {
-        center: [37.09, -80],
+        center: [37.09, -95.71],
         zoom: 3,
         layers: [street, earthquakes]
     });
@@ -105,8 +122,7 @@ legend.onAdd = function () {
             from + (to ? '&ndash;' + to +'<br>' : '+'));
             }
 
-
-
+        // Add labels to div text
         div.innerHTML += labels.join("") ;
         return div;
     };
