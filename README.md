@@ -10,7 +10,7 @@ The United States Geological Survey (USGS) is responsible for providing scientif
 ## Summary of Dataset
 The USGS provides earthquake data in a number of different formats, updated every 5 minutes. For this visualization, I used seismic activity in magnitude and depth for the past 7 days. The data could be found here   The following image is an example screenshot of what appears when you visit this link:
 
-## Project Steps
+## Project Flow
 I imported and visualized the data using `Leaflet library` and then created a map that plots all the earthquakes over the past week based on their longitude and latitude. The data markers reflects the magnitude of the earthquake by their size and the depth of the earthquake by color. Earthquakes with higher magnitudes would therefore appear larger, and earthquakes with greater depth should appear darker in color. Other features of the map include a popups that provide additional information about the earthquake when its associated marker is clicked. To aid visualization, I also created a legend that provides context for the map data.
 
 - Fig 1:Snapshot of map 
@@ -21,4 +21,4 @@ I imported and visualized the data using `Leaflet library` and then created a ma
 Deployed to  <a href = "https://jayplect.github.io/belly-button-microbe-diversity-dashboard/">Github pages<a/> to view.
 
 ## References
-Dataset created by the United States Geological Survey
+Dataset created by the United States Geological Survey.
